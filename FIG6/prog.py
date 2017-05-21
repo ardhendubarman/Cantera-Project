@@ -48,7 +48,7 @@ chem = col[2]
 diff = col[3]
 tdiff = col[4]
 #%%
-plt.figure(figsize=(10,30))
+plt.figure(figsize=(5,15))
 min_y = min(chem)
 index = chem.index(min_y)
 center = x_axis[1:-1][index]

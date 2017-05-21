@@ -160,11 +160,11 @@ ax1.plot(x_axis1[1:-1], chem1,'r-.',label= 'heat realease')
 ax1.plot(x_axis1[1:-1], tdiff1,'k', label= 'diffusive sum')
 ax1.set_xlim(-0.0003, 0.0003)
 ax1.set_ylim(-400000000, 400000000)
-ax1.legend(frameon=False,handlelength = 3, fontsize=10)
+ax1.legend(frameon=False,handlelength = 3, fontsize=12)
 ax1.locator_params(axis='x', nbins=4)
 ax1.locator_params(axis='y', nbins=10)
 ax1.set_title("600K", loc='right')
-ax1.set_ylabel('energy equation terms [K s^{-1}]',fontsize='large')##, verticalalignment='center', horizontalalignment ='right'
+ax1.set_ylabel('energy equation terms $10^7$[K s^{-1}]',fontsize='large')##, verticalalignment='center', horizontalalignment ='right'
 ax1.set_xlabel('location [m]',fontsize='large')
     
 
@@ -192,5 +192,5 @@ ax3.set_title("1450K", loc='right')
 ax3.set_xlabel('location [m]',fontsize='large')
 ax3.locator_params(axis='x', nbins=4)
 
-plt.savefig('plot1.pdf',bbox_inches='tight')
+plt.savefig('fig7.pdf',bbox_inches='tight')
 plt.show()

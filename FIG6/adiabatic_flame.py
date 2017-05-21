@@ -57,7 +57,7 @@ print('mixture-averaged flamespeed = {0:7f} m/s'.format(f.u[0]))
 #        'solution with multicomponent transport')
 
 # write the velocity, temperature, density, and mole fractions to a CSV file
-f.write_csv('adiabatic.csv', quiet=True)
+#f.write_csv('adiabatic.csv', quiet=True)
 
 
 #z=[a*b for a,b in zip(f.grid,f.u)]
@@ -90,17 +90,17 @@ center = z[index]
 for k in range(len(z)):
     z[k] = (z[k] - center)
 
-
+plt.figure(figsize=(3.75,7.5))
 plt.xlim(-0.0005, 0.0005)
 plt.ticklabel_format(style='sci', axis='x', scilimits=(0,0))
-plt.plot(z,f.X[index1],dashes=[8, 4, 2, 4, 2, 4],label='CH_4')
-plt.plot(z,20*f.X[index2],'r-.',label='CH_2O')
-plt.plot(z,600*f.X[index3],label='HCO')
-plt.plot(z,f.X[index4],'k--',label='CO')
-plt.legend(frameon=True, handlelength = 5, fontsize=20)
+plt.plot(z,f.X[index1],dashes=[8, 4, 2, 4, 2, 4],label='$X_{CH_4}$')
+plt.plot(z,20*f.X[index2],'r-.',label='$X_{CH_2O}*20$')
+plt.plot(z,600*f.X[index3],label='$X_{HCO}*600$')
+plt.plot(z,f.X[index4],'k--',label='$X_{CO}$')
+plt.legend(frameon=True, handlelength = 3, fontsize=12)
 #plt.ylabel('energy equation terms [K s^{-1}]',fontsize='large')##, verticalalignment='center', horizontalalignment ='right'
 plt.xlabel('location [m]',fontsize='large')
 plt.locator_params(axis='x', nbins=2)
 plt.title('600 K', loc='right')
-plt.savefig('plot1.pdf',bbox_inches='tight')
+plt.savefig('fig6_600.pdf',bbox_inches='tight')
 plt.show()

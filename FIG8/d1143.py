@@ -8,10 +8,10 @@ import pickle as pkl
 import numpy as np
 # Simulation parameters
 p = ct.one_atm  # pressure [Pa]
-Tin = 1143.0  # unburned gas temperature [K]
+Tin = 1200.0  # unburned gas temperature [K]
 reactants = 'CH4:1, O2:2, N2:7.52'  # premixed gas composition
 
-initial_grid = np.linspace(0,0.03,6)  # m
+initial_grid = np.linspace(0,1.58,6)  # m
 tol_ss = [1.0e-5, 1.0e-13]  # [rtol atol] for steady-state problem
 tol_ts = [1.0e-4, 1.0e-13]  # [rtol atol] for time stepping
 loglevel = 1  # amount of diagnostic output (0 to 8)

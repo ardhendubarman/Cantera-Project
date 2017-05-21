@@ -157,7 +157,7 @@ ax1.plot(x_axis1[1:-1], chem1,'r-.',label= 'heat realease')
 ax1.plot(x_axis1[1:-1], tdiff1,'k', label= 'diffusive sum')
 ax1.set_xlim(-0.0008, 0.0008)
 ax1.set_ylim(-400000000, 400000000)
-ax1.legend(frameon=False,loc="upper right",handlelength = 5, fontsize=15)
+ax1.legend(frameon=False,loc="upper right",handlelength = 3, fontsize=12)
 ax1.locator_params(axis='x', nbins=4)
 ax1.set_title("400K",loc='right')
 ax1.set_ylabel('energy equation terms [K s^{-1}]',fontsize='large')##, verticalalignment='center', horizontalalignment ='right'

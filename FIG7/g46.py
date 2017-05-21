@@ -10,7 +10,7 @@ import numpy as np
 p = 5*ct.one_atm  # pressure [Pa]
 S_l=[]
 #j=[0.32, 0.34, 0.38, 0.46, 0.62]
-i = np.linspace(300, 1400, 10)  # unburned gas temperature [K]
+i = np.linspace(300, 1400, 30)  # unburned gas temperature [K]
 grid=0.46
 for Tin in i:
     reactants = 'CH4:1, O2:2, N2:7.52'  # premixed gas composition

@@ -48,7 +48,7 @@ chem = col[2]
 diff = col[3]
 tdiff = col[4]
 #%%
-plt.figure(figsize=(10,30))
+plt.figure(figsize=(2.5,7.5))
 min_y = min(chem)
 index = chem.index(min_y)
 center = x_axis[1:-1][index]
@@ -62,10 +62,10 @@ plt.plot(x_axis[1:-1], conv,'k--', label='convection')
 ##plt.plot(x_axis[1:-1], cond, label= 'conduction')
 plt.plot(x_axis[1:-1], chem,'r-.',label= 'heat realease')
 plt.plot(x_axis[1:-1], tdiff,'k', label= 'diffusive sum')
-plt.legend(frameon=False, handlelength = 5, fontsize=20)
-plt.ylabel('energy equation terms [K s^{-1}]',fontsize='large')##, verticalalignment='center', horizontalalignment ='right'
+plt.legend(frameon=False, handlelength = 3, fontsize=12)
+plt.ylabel('energy equation terms $10^8$[$K s^{-1}]$',fontsize='large')##, verticalalignment='center', horizontalalignment ='right'
 plt.xlabel('location [m]',fontsize='large')
 plt.locator_params(axis='x', nbins=4)
 plt.title('298 K - 5 bar', loc='right')
-plt.savefig('plot1.pdf',bbox_inches='tight')
+plt.savefig('fig4.pdf',bbox_inches='tight')
 plt.show()
